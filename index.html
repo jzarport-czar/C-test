@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Programming Practice Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">C</div>
+    <div>
+      <h1>C Programming Practice Test</h1>
+      <p>Loops &amp; Control Flow · 30-item coding examination</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <div>
+        <span class="eyebrow">LABORATORY PRACTICE</span>
+        <h2>Test your C programming skills.</h2>
+        <p>Write your solution for each problem. Each question is worth one point.</p>
+      </div>
+      <div class="total-badge"><strong>30</strong><span>POINTS</span></div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><span>Total points</span><strong>30</strong></article>
+      <article class="stat-card"><span>Questions completed</span><strong id="completedCount">0 / 30</strong></article>
+      <article class="stat-card"><span>Your score</span><strong id="scoreCount">0 / 30</strong></article>
+    </section>
+
+    <div class="progress-info"><span id="progressLabel">0% completed</span><span>1 point per question</span></div>
+    <div class="progress-track"><div id="progressBar"></div></div>
+
+    <section class="question-card">
+      <div class="question-top">
+        <span class="question-number" id="questionNumber">QUESTION 1 OF 30</span>
+        <span class="status" id="questionStatus">Not answered</span>
+      </div>
+      <nav class="question-nav" id="questionNav" aria-label="Question navigation"></nav>
+      <div class="question-content">
+        <span class="eyebrow">CODING QUESTION</span>
+        <h2 id="questionTitle">Question title</h2>
+        <p id="questionPrompt"></p>
+        <div class="hint" id="questionHint"></div>
+      </div>
+    </section>
+
+    <section class="editor-card">
+      <div class="editor-heading">
+        <label for="codeAnswer">Your C code</label>
+        <span>Language: C</span>
+      </div>
+      <textarea id="codeAnswer" spellcheck="false" placeholder="#include &lt;stdio.h&gt;
+
+int main() {
+    // Write your code here
+
+    return 0;
+}"></textarea>
+      <div class="editor-actions">
+        <button class="button secondary" id="clearButton">Clear code</button>
+        <button class="button secondary" id="solutionButton">Show sample solution</button>
+      </div>
+      <div class="solution-box hidden" id="solutionBox">
+        <div class="solution-title">Sample solution</div>
+        <pre id="solutionCode"></pre>
+        <p>Compare your answer with this example. Other correct solutions may also be possible.</p>
+      </div>
+    </section>
+
+    <section class="mark-card">
+      <div>
+        <h3>Self-check your answer</h3>
+        <p>After checking your code, mark it correct to award yourself one point.</p>
+      </div>
+      <label class="check-label"><input type="checkbox" id="correctCheckbox"> I solved this question correctly (+1 point)</label>
+    </section>
+
+    <div class="main-actions">
+      <button class="button secondary" id="previousButton">← Previous</button>
+      <button class="button primary" id="nextButton">Next question →</button>
+    </div>
+    <button class="button finish-button" id="finishButton">Finish and view my score</button>
+
+    <section class="results hidden" id="results">
+      <div class="result-main">
+        <span class="eyebrow">TEST COMPLETED</span>
+        <h2>Your final score</h2>
+        <strong id="finalScore">0 / 30</strong>
+        <p id="resultMessage">Keep practicing!</p>
+        <span id="percentage">0%</span>
+      </div>
+      <div class="result-details">
+        <h3>Test summary</h3>
+        <p><span>Marked correct</span><strong id="correctTotal">0</strong></p>
+        <p><span>Not marked correct</span><strong id="incorrectTotal">30</strong></p>
+        <p><span>Questions with code entered</span><strong id="writtenTotal">0</strong></p>
+      </div>
+      <div class="result-actions">
+        <button class="button secondary" id="reviewButton">Review answers</button>
+        <button class="button primary" id="restartButton">Retake test</button>
+      </div>
+      <p class="note">Scoring is self-assessed. This website does not compile or automatically evaluate C code.</p>
+    </section>
+    <footer>Keep practicing. Understand the logic, not just the answer.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
